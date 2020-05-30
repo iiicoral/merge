@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HW17-12</title>
+	<style>
+		.display{
+
+			background-color: pink
+
+		}
+		
+	</style>
+</head>
+<body>
+	<div id = "display"></div>
+	<script type="text/javascript">
+
+		var display = document.getElementById('display');
+
+		function random(){
+			var ran = Math.floor(Math.random() * 4 + 4);
+			return ran;
+		}
+		function random2(){
+			var ran2 = Math.floor(Math.random() * 10);
+			return ran2;
+		}
+
+		var color = ['orange', 'black', 'pink', 'green', 'blue', 'yellow', 'purple', 'lightblue', 'deeppink', 'chocolate'];
+
+		for(var i = 0; i < random(); i++){
+			var ran_Color = color[random2()];
+			var ran_Num = random2();
+			var div = document.createElement('div');
+			div.style.color = ran_Color;
+			div.style.fontSize = 72+'px';
+			div.innerText = ran_Num;
+			display.append(div);
+		}
+		
+		
+	</script>
+		
+</body>
+</html>
